@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "glyphicons";
+    src:url(../fonts/glyphicons-halflings-regular.ttf);
+}
+body,input,ul,li,a,img{
+    margin:0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 微软雅黑, serif,glyphicons;
+    color: #444444;
+    background-color: #f1f2f3;
+    font-size: 0.65em;
+}
+a{
+    text-decoration: none;
+    color: #444;
+}
+a:hover{
+    text-decoration: underline;
+}
+header{
+    width: 100vw;
+    height: 80px;
+    background-color: white;
+    border-bottom: 1px solid #d4d5d6;
+    box-shadow: 0 -3px 10px 5px #ecedee;
+
+}
+.logo{
+    width: 99px;
+    height: 45px;
+    background-image: url("../imges/sprite.png");
+}
+.orient-center{
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+}
+header .inner{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.categroy-filter{
+    width:87px;
+    height: 34px;
+    border:1px solid #e1e1e1;
+    margin-left: 1.2vw;
+    text-align: center;
+    word-spacing: 1.2em;
+    line-height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.categroy-filter:hover{
+    height: 56px;
+    align-self: flex-end;
+
+}
+.categroy-filter .cover{
+    transition: visibility 0.3s;
+    width: 88px;
+    height: 51px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -1px;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    background-color: white;
+    visibility: hidden;
+}
+.categroy-filter:hover .cover{
+    visibility: visible;
+}
+.categroy-filter .icon:before{
+    content: "\e114";
+}
+.categroy-filter div{
+    float: left;
+}
+.categroy-filter .title{
+    font-size: 1.6em;
+    position: relative;
+    z-index: 2;
+}
+.categroy-filter .icon{
+    margin-left: 10px;
+    transition: transform 0.5s;
+    line-height: 35px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+}
+.categroy-filter:hover .icon{
+    transform: rotate(-180deg);
+}
+.categroy-filter .categroies{
+    width:488px;
+    height: 350px;
+    background-color: white;
+    position: absolute;
+    top:50px;
+    left: -1px;
+    border: 1px solid #e1e1e1;
+    display: flex;
+    visibility: hidden;
+    transition: visibility 0.3s,height 0.3s;
+}
+.categroy-filter:hover .categroies{
+    visibility: visible;
+}
+.categroy-filter .categroies .inner{
+    width:93%;
+    height: 80%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+}
+.categroy-filter .categroies .inner .first-menu{
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #e1e1e1;
+}
+.categroy-filter .categroies .inner .first-menu a{
+    display: block;
+    text-align: left;
+}
+.categroy-filter .categroies .inner .secondary-menu{
+    width: 80%;
+    height: 100%;
+}
+.first-menu-3{
+    margin-top: 12px;
+}
+.secondary-menu > div{
+    width: 90%;
+    height: 44px;
+    border-bottom: 1px dashed #e1e1e1;
+    float: right;
+    display: flex;
+    line-height: 1;
+    align-items: center;
+}
+.secondary-menu > div:last-child{
+    border:none;
+}
+.secondary-menu > div:first-child{
+    margin-top: -15px;
+}
+.secondary-menu > div a{
+    padding: 3px 20px;
+    border-right: 1px solid #e1e1e1;
+    height: 18px;
+    display: block;
+}
+.secondary-menu > div a:last-child{
+    border: none;
+}
+.secondary-menu > div a:first-child{
+    padding-left: 5px;
+}
+.search-container{
+    width: 25vw;
+    height: 45%;
+    border:1px solid #c5c5c5;
+    margin-left: 5vw;
+    display: flex;
+    align-items: center;
+}
+.search-container input{
+    border: none;
+    padding-left: 3px;
+    width:93%;
+}
+.search-container span:before{
+    content: "\e003";
+    color: #b6b6b6;
+    font-size: 1.8em;
+}
+.search-container input:focus{
+    outline: none;
+}
+.banner{
+    margin-top: 50px;
+}
+.carousel {
+    width: 710px;
+    height: 443px;
+    overflow: hidden;
+}
+.carousel .image-wrapper{
+    width: 4000px;
+    height: 100%;
+    animation: carousel 15s infinite;
+}
+.carousel .image-wrapper img{
+    display: block;
+    height: 100%;
+    float: left;
+}
+@keyframes carousel {
+    0%{
+        transform: translate(0,0);
+    }
+    10%{
+        transform: translate(0,0);
+    }
+    20%{
+        transform: translate(-710px,0)
+    }
+    30%{
+        transform: translate(-710px,0)
+    }
+    40%{
+        transform: translate(-1420px,0)
+    }
+    50%{
+        transform: translate(-1420px,0)
+    }
+    60%{
+        transform: translate(-2130px,0)
+    }
+    70%{
+        transform: translate(-2130px,0)
+    }
+    80%{
+        transform: translate(-2840px,0)
+    }
+    90%{
+        transform: translate(-2840px,0)
+    }
+    /*100%{*/
+        /*transform: translate(-3550,0)*/
+    /*}*/
+}
